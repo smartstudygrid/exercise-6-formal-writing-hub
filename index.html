@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGCSE Exercise 6 Formal Writing Master Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            800: '#0c4a6e',
+                            900: '#0f172a',
+                        },
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .tab-btn.active {
+            background-color: #0369a1;
+            color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(3, 105, 161, 0.25);
+        }
+        .subtab-btn.active {
+            border-color: #0284c7;
+            color: #0284c7;
+            background-color: #f0f9ff;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-sky-600 to-indigo-600 p-2.5 rounded-xl shadow-lg">
+                    <i class="fa-solid fa-file-pen text-xl text-white"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="bg-amber-500 text-slate-950 text-xs font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Exercise 6 Formal Writing</span>
+                        <span class="text-xs text-slate-400 font-medium">Syllabus 0510 / 0511 / 0991 / 0993</span>
+                    </div>
+                    <h1 class="text-xl font-extrabold font-heading tracking-tight text-white">IGCSE Exercise 6 Writing Master Suite</h1>
+                </div>
+            </div>
+
+            <div class="flex items-center bg-slate-800/80 border border-slate-700/60 rounded-xl px-4 py-2 text-xs text-slate-300">
+                <div class="mr-3 border-r border-slate-700 pr-3">
+                    <p class="font-semibold text-slate-100 flex items-center gap-1.5">
+                        <i class="fa-solid fa-user-tie text-sky-400"></i> Amanullah Khan
+                    </p>
+                    <p class="text-slate-400 text-[11px]">Senior IGCSE ESL Specialist</p>
+                </div>
+                <div class="space-y-0.5">
+                    <p class="flex items-center gap-1.5 hover:text-white">
+                        <i class="fa-solid fa-envelope text-amber-400"></i> amanullah@ais.sch.sa
+                    </p>
+                    <p class="flex items-center gap-1.5 hover:text-white">
+                        <i class="fa-solid fa-school text-emerald-400"></i> Al-Rowad International Schools
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 flex flex-col md:flex-row gap-6 w-full">
+
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-64 flex-shrink-0">
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 sticky top-24">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 px-2">Exercise 6 Topics</p>
+                <nav class="space-y-1.5">
+                    <button onclick="switchTab('overview')" id="btn-overview" class="tab-btn active w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-semibold rounded-xl text-slate-600 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-compass w-5 text-center"></i> Overview & Rules
+                    </button>
+                    <button onclick="switchTab('marking')" id="btn-marking" class="tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-semibold rounded-xl text-slate-600 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-clipboard-check w-5 text-center"></i> Mark Scheme (15 Marks)
+                    </button>
+                    <button onclick="switchTab('formats')" id="btn-formats" class="tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-semibold rounded-xl text-slate-600 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-layer-group w-5 text-center"></i> 3 Writing Formats & Formulas
+                    </button>
+                    <button onclick="switchTab('phrases')" id="btn-phrases" class="tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-semibold rounded-xl text-slate-600 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-wand-magic-sparkles w-5 text-center"></i> High-Level Vocab & Connectors
+                    </button>
+                    <button onclick="switchTab('models')" id="btn-models" class="tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-semibold rounded-xl text-slate-600 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-file-signature w-5 text-center"></i> Model Answers & Analyses
+                    </button>
+                    <button onclick="switchTab('practice')" id="btn-practice" class="tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 text-sm font-semibold rounded-xl text-slate-600 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-keyboard w-5 text-center"></i> Live Practice Studio
+                    </button>
+                </nav>
+
+                <div class="mt-6 pt-4 border-t border-slate-100 bg-sky-50 p-3.5 rounded-xl border-sky-200">
+                    <p class="text-xs font-semibold text-sky-900 flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-exclamation text-sky-600"></i> Syllabus Rule Notice:
+                    </p>
+                    <p class="text-xs text-sky-800 mt-1 leading-relaxed">
+                        In Exercise 6, you will be tasked with either an <strong>Article / Essay</strong>, a <strong>Report</strong>, or a <strong>Review</strong>. Target word count is <strong>120–160 words</strong> (150–170 recommended).
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 min-w-0">
+
+            <section id="sec-overview" class="space-y-6">
+                <!-- Overview Banner -->
+                <div class="bg-gradient-to-r from-sky-800 via-indigo-900 to-slate-900 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-2">Paper 1: Reading & Writing</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold font-heading">Exercise 6 Formal Writing Guide</h2>
+                        <p class="text-sky-100 mt-2 max-w-2xl text-sm sm:text-base leading-relaxed">
+                            Exercise 6 tests your ability to express opinions, construct arguments, report facts, or evaluate entertainment/media in a clear, structured, and formal manner for a target audience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Core Specifications Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="bg-sky-100 text-sky-600 p-3 rounded-lg"><i class="fa-solid fa-stopwatch text-lg"></i></div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Recommended Time</p>
+                            <p class="text-lg font-bold text-slate-800">25–30 Minutes</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="bg-emerald-100 text-emerald-600 p-3 rounded-lg"><i class="fa-solid fa-arrow-up-right-dots text-lg"></i></div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Updated Syllabus Limits</p>
+                            <p class="text-base font-bold text-slate-800">120 – 160 Words</p>
+                            <p class="text-[11px] font-semibold text-emerald-600">(150 – 170 Recommended)</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="bg-purple-100 text-purple-600 p-3 rounded-lg"><i class="fa-solid fa-award text-lg"></i></div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Total Weightage</p>
+                            <p class="text-lg font-bold text-slate-800">15 Marks total</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="bg-amber-100 text-amber-600 p-3 rounded-lg"><i class="fa-solid fa-sliders text-lg"></i></div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Mark Breakdown</p>
+                            <p class="text-lg font-bold text-slate-800">Content 6m | Lang 9m</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 Text Types Overview -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 font-heading mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-sky-600"></i> The 3 Exercise 6 Text Types at a Glance
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <span class="bg-sky-100 text-sky-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">Type 1</span>
+                                <h4 class="font-bold text-slate-900 text-base mt-2">Article / Essay / Argumentative</h4>
+                                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                    Discuss controversial or open topics (e.g., <em>Should mobile phones be allowed in schools?</em>, <em>Should zoos be shut down?</em>, <em>Should animal testing for medicine be banned?</em>). Presents balanced arguments with a clear stance.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-sky-700 font-medium flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check text-sky-600"></i> Focus: Thesis, PEEL, Ethical & Policy Arguments
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <span class="bg-emerald-100 text-emerald-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">Type 2</span>
+                                <h4 class="font-bold text-slate-900 text-base mt-2">Formal Report</h4>
+                                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                    Presents factual findings about events, trips, or facilities (e.g., <em>School trip to a museum / amusement park</em>, <em>Science Exhibition</em>, <em>Health & Fitness Week</em>, <em>Facility audits</em>). Uses subheadings and passive voice.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-emerald-700 font-medium flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i> Focus: Subheadings, Observations, Actionable Recommendations
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <span class="bg-purple-100 text-purple-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">Type 3</span>
+                                <h4 class="font-bold text-slate-900 text-base mt-2">Product / Venue / Media Review</h4>
+                                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                    Evaluates an experience or product for peers (e.g., <em>Mobile apps, tech gadgets, new coffee shops/restaurants, amusement parks, films, books</em>). Details pros, cons, ambiance, and recommendations.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-purple-700 font-medium flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check text-purple-600"></i> Focus: Features, Performance, Rating & Verdict
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Dos & Don'ts -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 font-heading mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600"></i> Golden Rules for Success
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                                <span><strong>Use a Captivating Title:</strong> Write 3 to 4 words, preferably in ALL CAPS or underlined (e.g., <em>WHAT MAKES A FILM ENJOYABLE?</em>).</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                                <span><strong>Structure into 4 Clear Paragraphs:</strong> Introduction, 2 main body paragraphs (arguments/findings), and a formal conclusion.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                                <span><strong>Maintain Formal Register:</strong> Avoid informal slang, emojis, or contractions (write <em>do not, cannot, should not</em> instead of <em>don't, can't</em>).</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-500 mt-1"></i>
+                                <span><strong>Use Sophisticated Connectors:</strong> Employ formal linking devices like <em>Furthermore, On the other hand, Consequently, To conclude</em>.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 font-heading mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i> Major Pitfalls to Avoid
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                                <span><strong>Using Informal Conversational Tone:</strong> Don't treat Exercise 6 like Exercise 5. Avoid informal greetings like <em>"Hi guys!"</em> or informal slang.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                                <span><strong>Simply Copying Prompt Comments:</strong> The prompt comments are starting points. Always rephrase them in your own words with added development.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                                <span><strong>One-Sided Rants without Counter-arguments:</strong> In essays, missing a counter-argument weakens the evaluation and caps Content marks.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-xmark text-rose-500 mt-1"></i>
+                                <span><strong>Giving Away Movie/Book Endings:</strong> In reviews, spoiling the ending ruins the recommendation aspect for the audience.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-marking" class="space-y-6 hidden">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <h2 class="text-2xl font-bold font-heading text-slate-900 mb-2">Cambridge IGCSE Exercise 6 Marking Rubric</h2>
+                    <p class="text-sm text-slate-600">Official Assessment Criteria for 0510 / 0511 / 0991 / 0993 (15 Marks Total)</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                    <!-- Table A: Content (6 Marks) -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between border-b pb-3 mb-4">
+                                <h3 class="text-lg font-bold text-slate-900 font-heading">Table A: Content</h3>
+                                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full">6 Marks Max</span>
+                            </div>
+
+                            <div class="space-y-4 text-xs sm:text-sm">
+                                <div class="p-3.5 bg-emerald-50 rounded-xl border border-emerald-200">
+                                    <div class="flex justify-between font-bold text-emerald-900 mb-1">
+                                        <span>Marks 5 – 6</span>
+                                        <span>Top Tier</span>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-1 text-emerald-800">
+                                        <li>Task is fully fulfilled; content is consistently relevant.</li>
+                                        <li>Clear sense of audience, purpose, and formal style throughout.</li>
+                                        <li>Ideas are exceptionally well developed with effective supporting details.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 bg-amber-50 rounded-xl border border-amber-200">
+                                    <div class="flex justify-between font-bold text-amber-900 mb-1">
+                                        <span>Marks 3 – 4</span>
+                                        <span>Satisfactory</span>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-1 text-amber-800">
+                                        <li>Task is generally fulfilled; content is mostly relevant.</li>
+                                        <li>Generally appropriate formal style for the text type.</li>
+                                        <li>Good sense of purpose and audience; ideas generally developed.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 bg-rose-50 rounded-xl border border-rose-200">
+                                    <div class="flex justify-between font-bold text-rose-900 mb-1">
+                                        <span>Marks 1 – 2</span>
+                                        <span>Limited</span>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-1 text-rose-800">
+                                        <li>Task partially fulfilled; style inconsistent or inappropriate.</li>
+                                        <li>Limited sense of purpose and audience; brief or repetitive ideas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table B: Language (9 Marks) -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between border-b pb-3 mb-4">
+                                <h3 class="text-lg font-bold text-slate-900 font-heading">Table B: Language</h3>
+                                <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full">9 Marks Max</span>
+                            </div>
+
+                            <div class="space-y-4 text-xs sm:text-sm">
+                                <div class="p-3.5 bg-emerald-50 rounded-xl border border-emerald-200">
+                                    <div class="flex justify-between font-bold text-emerald-900 mb-1">
+                                        <span>Marks 7 – 9</span>
+                                        <span>Skilful & Precise</span>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-1 text-emerald-800">
+                                        <li>Uses wide range of common & topic-specific less common vocabulary.</li>
+                                        <li>Uses a variety of complex sentence structures effectively.</li>
+                                        <li>High level of accuracy; minor errors do not impede understanding.</li>
+                                        <li>Organized smoothly with effective formal transitional devices.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 bg-amber-50 rounded-xl border border-amber-200">
+                                    <div class="flex justify-between font-bold text-amber-900 mb-1">
+                                        <span>Marks 4 – 6</span>
+                                        <span>Clear & Competent</span>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-1 text-amber-800">
+                                        <li>Communicates clearly; uses range of simple and some complex structures.</li>
+                                        <li>Generally good accuracy with occasional grammatical slips.</li>
+                                        <li>Well organized with basic logical sequence and linking words.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-3.5 bg-rose-50 rounded-xl border border-rose-200">
+                                    <div class="flex justify-between font-bold text-rose-900 mb-1">
+                                        <span>Marks 1 – 3</span>
+                                        <span>Basic Control</span>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-1 text-rose-800">
+                                        <li>Uses basic vocabulary and simple sentences.</li>
+                                        <li>Frequent errors impede clarity; poor structural organization.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher Amanullah Khan's Checklist -->
+                <div class="bg-gradient-to-br from-slate-900 to-sky-950 rounded-2xl p-6 text-white shadow-lg">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-amber-500 text-slate-950 p-2 rounded-lg font-bold"><i class="fa-solid fa-list-check"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold font-heading">Mr. Amanullah Khan's Exercise 6 Checklist</h3>
+                            <p class="text-xs text-slate-300">Al-Rowad International Schools Formal Writing Audit</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm space-y-2">
+                            <p class="font-bold text-amber-400 uppercase text-xs tracking-wider">Structural & Formatting Items</p>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-amber-200">
+                                <input type="checkbox" class="rounded text-amber-500 focus:ring-0"> Title included (3-4 words, ALL CAPS or underlined)
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-amber-200">
+                                <input type="checkbox" class="rounded text-amber-500 focus:ring-0"> Hook / Rhetorical question in Introduction
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-amber-200">
+                                <input type="checkbox" class="rounded text-amber-500 focus:ring-0"> Clear Thesis statement stating position
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-amber-200">
+                                <input type="checkbox" class="rounded text-amber-500 focus:ring-0"> PEEL structure used in body paragraphs
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-amber-200">
+                                <input type="checkbox" class="rounded text-amber-500 focus:ring-0"> Final conclusion reinstating main thesis
+                            </label>
+                        </div>
+
+                        <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm space-y-2">
+                            <p class="font-bold text-emerald-400 uppercase text-xs tracking-wider">Language & Vocabulary Items</p>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-emerald-200">
+                                <input type="checkbox" class="rounded text-emerald-500 focus:ring-0"> No informal contractions (uses "do not", "cannot")
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-emerald-200">
+                                <input type="checkbox" class="rounded text-emerald-500 focus:ring-0"> Time-fixers & linking devices used
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-emerald-200">
+                                <input type="checkbox" class="rounded text-emerald-500 focus:ring-0"> Topic-specific advanced vocabulary included
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-emerald-200">
+                                <input type="checkbox" class="rounded text-emerald-500 focus:ring-0"> Generalization phrases used ("It is widely believed")
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:text-emerald-200">
+                                <input type="checkbox" class="rounded text-emerald-500 focus:ring-0"> Counter-argument introduced and refuted
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-formats" class="space-y-6 hidden">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <h2 class="text-2xl font-bold font-heading text-slate-900 mb-2">Exercise 6 Writing Formulas & Structures</h2>
+                    <p class="text-sm text-slate-600">Select a writing type below to view its specific structure and paragraph breakdown.</p>
+                </div>
+
+                <!-- Subtab navigation -->
+                <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
+                    <button onclick="switchFormatSubtab('article')" id="subtab-article" class="subtab-btn active px-4 py-2 text-xs font-bold rounded-xl border border-slate-200 text-slate-700 transition">
+                        <i class="fa-solid fa-newspaper mr-1.5"></i> Article / Essay Topics (Mobile Phones, Zoos, Animal Testing)
+                    </button>
+                    <button onclick="switchFormatSubtab('report')" id="subtab-report" class="subtab-btn px-4 py-2 text-xs font-bold rounded-xl border border-slate-200 text-slate-700 transition">
+                        <i class="fa-solid fa-chart-pie mr-1.5"></i> Formal Report (Museum Trips, Science Fair, Health Week)
+                    </button>
+                    <button onclick="switchFormatSubtab('review')" id="subtab-review" class="subtab-btn px-4 py-2 text-xs font-bold rounded-xl border border-slate-200 text-slate-700 transition">
+                        <i class="fa-solid fa-star-half-stroke mr-1.5"></i> Reviews (Apps, Coffee Shops, Theme Parks, Movies, Books)
+                    </button>
+                </div>
+
+                <!-- Subtab Content 1: Article / Essay -->
+                <div id="format-article-content" class="space-y-4">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-sky-100 text-sky-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Title & Opening Hook</span>
+                            <span class="text-xs text-slate-500">Approx. 25–35 Words</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">1st Paragraph: Catchy Title + Hook + Thesis</h3>
+                        <p class="text-xs text-slate-600 mb-3">Hooks the reader with a relevant question or bold assertion regarding school policy, animal welfare, or technology.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• <strong>Example 1 (Mobile Phones in School):</strong> "SHOULD SMARTPHONES BE BANNED IN CLASSROOMS? Is constant connectivity empowering students or destroying academic focus?"</p>
+                            <p>• <strong>Example 2 (Closing Zoos):</strong> "ARE ZOOS PRISONS OR SANCTUARIES? Should wild animals be kept in captivity for human entertainment?"</p>
+                            <p>• <strong>Example 3 (Medical Animal Testing):</strong> "THE ETHICS OF ANIMAL TESTING: Does saving human lives justify animal suffering?"</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">PEEL Body 1</span>
+                            <span class="text-xs text-slate-500">Approx. 50–55 Words</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">2nd Paragraph: Core Supporting Arguments</h3>
+                        <p class="text-xs text-slate-600 mb-3">Develop major reasons supporting your main thesis with logical evidence and impact analysis.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• <strong>Mobile Phones:</strong> "Smartphones provide instantaneous access to educational research and digital textbooks during group projects."</p>
+                            <p>• <strong>Zoo Closure:</strong> "Modern zoological parks play a critical role in breeding endangered species and raising conservation awareness."</p>
+                            <p>• <strong>Animal Testing:</strong> "Medical research on animal models has led to life-saving breakthroughs in vaccines and cancer therapies."</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">PEEL Body 2</span>
+                            <span class="text-xs text-slate-500">Approx. 45–50 Words</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">3rd Paragraph: Counter-Argument & Refutation</h3>
+                        <p class="text-xs text-slate-600 mb-3">Acknowledge the opposing perspective fairly before refuting it with superior evidence.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• <strong>Counter:</strong> "Opponents argue that phones cause distraction or animal testing causes unnecessary pain."</p>
+                            <p>• <strong>Refutation:</strong> "However, strict classroom regulations or synthetic testing alternatives effectively mitigate these concerns."</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Conclusion</span>
+                            <span class="text-xs text-slate-500">Approx. 25–30 Words</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">4th Paragraph: Synthesis & Call to Action</h3>
+                        <p class="text-xs text-slate-600 mb-3">Summarize key points and present a balanced final solution.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• "To conclude, rather than imposing outright bans, establishing clear guidelines ensures progress while addressing ethical risks."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtab Content 2: Report -->
+                <div id="format-report-content" class="space-y-4 hidden">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Header & Purpose</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">REPORT TITLE & OBJECTIVE</h3>
+                        <p class="text-xs text-slate-600 mb-3">State the objective clearly in formal, passive language across any event, trip, or facility topic.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• <strong>Museum Field Trip:</strong> "REPORT ON EDUCATIONAL FIELD TRIP TO THE NATIONAL MUSEUM"</p>
+                            <p>• <strong>Science Exhibition:</strong> "REPORT ON THE ANNUAL SCIENCE & INNOVATION EXHIBITION"</p>
+                            <p>• <strong>Health & Fitness Week:</strong> "REPORT ON SCHOOL HEALTH AND FITNESS WEEK ACTIVITIES"</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Subheadings & Key Observations</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">FINDINGS & EVALUATION</h3>
+                        <p class="text-xs text-slate-600 mb-3">Use section subheadings to systematically record student engagement and operational observations.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• <strong>Interactive Displays & Student Engagement:</strong> "It was observed that interactive robotics workshops at the science exhibition attracted over 200 participants."</p>
+                            <p>• <strong>Logistics and Scheduling:</strong> "Although transport to the museum was well-organized, crowded exhibition halls reduced guided tour duration."</p>
+                            <p>• <strong>Participation in Sports Workshops:</strong> "Over 80% of students actively participated in healthy cooking seminars and fitness challenges."</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Recommendations</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">RECOMMENDATIONS & FUTURE IMPROVEMENTS</h3>
+                        <p class="text-xs text-slate-600 mb-3">Provide practical, actionable recommendations for school leadership or event committees.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• "In order to maximize future educational benefits, it is recommended to extend the exhibition duration to two days and allocate smaller tour groups."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtab Content 3: Review -->
+                <div id="format-review-content" class="space-y-4 hidden">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Catchy Opening</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">1. Hook & Introduction across Media, Venues, & Apps</h3>
+                        <p class="text-xs text-slate-600 mb-3">Introduce the subject (App, Product, Coffee Shop, Amusement Park, Movie, or Book) with target audience hooks.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• <strong>Mobile App Review:</strong> "DUOLINGO APP: Is this mobile app truly the ultimate tool for mastering languages on the go?"</p>
+                            <p>• <strong>Coffee Shop / Restaurant:</strong> "THE DAILY GRIND CAFÉ: Looking for the perfect study spot with artisanal coffee and warm ambiance?"</p>
+                            <p>• <strong>Amusement Park:</strong> "ADRENALINE WORLD: Does this newly opened theme park deliver heart-pounding rollercoasters and fun?"</p>
+                            <p>• <strong>Tech Product / Gadget:</strong> "SOUNDPULSE WIRELESS EARBUDS: Premium noise cancellation at a student-friendly price?"</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Features & Analysis</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">2. In-Depth Features & Evaluation (Pros & Cons)</h3>
+                        <p class="text-xs text-slate-600 mb-3">Analyze functionality, user experience, culinary quality, or ride excitement depending on subject.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• <strong>App/Tech:</strong> "The user interface is intuitive and fast. However, occasional software glitches disrupt offline access."</p>
+                            <p>• <strong>Coffee Shop/Restaurant:</strong> "The espresso blends are exceptionally smooth and fresh. Nevertheless, weekend queue times can be tedious."</p>
+                            <p>• <strong>Amusement Park:</strong> "The flagship hyper-coaster provides unmatched thrills, though ticket prices remain somewhat steep."</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Final Verdict</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">3. Verdict, Target Audience & Star Rating</h3>
+                        <p class="text-xs text-slate-600 mb-3">Conclude with clear recommendations regarding who should visit or purchase.</p>
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs space-y-1.5 font-mono text-slate-700">
+                            <p>• "Overall rating: 4.5/5 Stars! Highly recommended for students, tech enthusiasts, or families looking for a weekend outing."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-phrases" class="space-y-6 hidden">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <h2 class="text-2xl font-bold font-heading text-slate-900 mb-2">Expanded High-Level Vocabulary & Phrase Bank</h2>
+                    <p class="text-sm text-slate-600">Click any phrase to copy it directly into your notes! Tailored for Articles, Essays, Reports, and Reviews.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Category 1: Article/Essay Debates -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 class="font-bold text-slate-900 text-sm font-heading mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-scale-balanced text-sky-600"></i> Essay Debates (Phones, Zoos, Animal Testing)
+                        </h3>
+                        <div class="space-y-2 text-xs">
+                            <div onclick="copyPhrase('Proponents of banning smartphones in class argue that...')" class="p-2.5 bg-slate-50 hover:bg-sky-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"Proponents of banning smartphones argue..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('Ethical considerations surrounding animal welfare in captivity suggest...')" class="p-2.5 bg-slate-50 hover:bg-sky-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"Ethical considerations surrounding animal welfare..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('While medical testing on animals has historically saved lives, modern alternatives...')" class="p-2.5 bg-slate-50 hover:bg-sky-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"While medical testing on animals has saved lives..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Reports on Trips & Events -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 class="font-bold text-slate-900 text-sm font-heading mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-clipboard-list text-emerald-600"></i> Reports (Museum Trips, Science Fair, Health Week)
+                        </h3>
+                        <div class="space-y-2 text-xs">
+                            <div onclick="copyPhrase('The primary objective of this report is to evaluate the educational value of the museum trip...')" class="p-2.5 bg-slate-50 hover:bg-emerald-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"The primary objective of this report is..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('Feedback collected during Health & Fitness Week indicated high student enthusiasm...')" class="p-2.5 bg-slate-50 hover:bg-emerald-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"Feedback collected during Health Week indicated..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('The interactive experiments at the Science Exhibition proved immensely popular...')" class="p-2.5 bg-slate-50 hover:bg-emerald-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"The interactive experiments at the Science Exhibition..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Reviews - Apps & Products -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 class="font-bold text-slate-900 text-sm font-heading mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-mobile-screen text-purple-600"></i> Reviews (Mobile Apps & Tech Products)
+                        </h3>
+                        <div class="space-y-2 text-xs">
+                            <div onclick="copyPhrase('Boasting an intuitive user interface and lightning-fast loading speeds...')" class="p-2.5 bg-slate-50 hover:bg-purple-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"Boasting an intuitive user interface..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('Despite its sleek ergonomic design, the short battery life is disappointing.')" class="p-2.5 bg-slate-50 hover:bg-purple-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"Despite its sleek ergonomic design..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('An indispensable application for students seeking productivity and seamless organization.')" class="p-2.5 bg-slate-50 hover:bg-purple-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"An indispensable application for students..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Reviews - Coffee Shops, Parks & Restaurants -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 class="font-bold text-slate-900 text-sm font-heading mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-mug-hot text-amber-600"></i> Reviews (Cafes, Restaurants & Theme Parks)
+                        </h3>
+                        <div class="space-y-2 text-xs">
+                            <div onclick="copyPhrase('Featuring cozy ambient lighting, artisanal roasts, and courteous staff...')" class="p-2.5 bg-slate-50 hover:bg-amber-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"Featuring cozy ambient lighting, artisanal..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('Offering heart-pounding rollercoasters and thrilling attractions for all ages...')" class="p-2.5 bg-slate-50 hover:bg-amber-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"Offering heart-pounding rollercoasters..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                            <div onclick="copyPhrase('The culinary presentation was exquisite, though pricing remains relatively high.')" class="p-2.5 bg-slate-50 hover:bg-amber-50 rounded-xl border border-slate-200 cursor-pointer transition flex justify-between items-center">
+                                <span class="font-semibold text-slate-800">"The culinary presentation was exquisite..."</span>
+                                <i class="fa-regular fa-copy text-slate-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-models" class="space-y-6 hidden">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <h2 class="text-2xl font-bold font-heading text-slate-900 mb-2">High-Scoring Model Answers with Teacher Commentary</h2>
+                    <p class="text-sm text-slate-600">Examine authentic past paper models across Articles, Essays, Reports, and Reviews.</p>
+                </div>
+
+                <!-- Model Selector Tabs -->
+                <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
+                    <button onclick="loadModel(1)" id="model-tab-1" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-sky-600 text-white shadow-sm">
+                        Model 1: Film Enjoyability Article (168 words)
+                    </button>
+                    <button onclick="loadModel(2)" id="model-tab-2" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200">
+                        Model 3: Pros & Cons of Cars Essay (165 words)
+                    </button>
+                    <button onclick="loadModel(3)" id="model-tab-3" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200">
+                        Model 3: Film Review - Mission Impossible (158 words)
+                    </button>
+                    <button onclick="loadModel(4)" id="model-tab-4" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200">
+                        Model 4: Book Review - Oliver Twist (162 words)
+                    </button>
+                </div>
+
+                <!-- Model Content Display -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                    <!-- Main Text Box -->
+                    <div class="lg:col-span-2 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between border-b pb-3 mb-4">
+                            <div>
+                                <span id="modelCode" class="text-xs font-bold text-sky-600 uppercase">0510_w24_qp_11</span>
+                                <h3 id="modelTitle" class="text-lg font-bold text-slate-900 font-heading">WHAT MAKES A FILM ENJOYABLE?</h3>
+                            </div>
+                            <span id="modelWords" class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full">168 words</span>
+                        </div>
+
+                        <div class="bg-sky-50/80 border border-sky-200 rounded-xl p-3.5 mb-5 text-xs text-sky-900">
+                            <p class="font-bold mb-1"><i class="fa-solid fa-circle-info text-sky-600 mr-1"></i> Exam Prompt:</p>
+                            <p id="modelPrompt">Your class recently discussed films. Write an article for your school magazine about what you think makes a film enjoyable.</p>
+                        </div>
+
+                        <div id="modelText" class="text-sm leading-relaxed text-slate-800 space-y-3 font-sans bg-slate-50/50 p-5 rounded-xl border border-slate-200/60 whitespace-pre-line">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Commentary Box -->
+                    <div class="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-4 pb-3 border-b border-slate-800">
+                                <div class="bg-amber-500 text-slate-950 p-2 rounded-lg font-bold text-xs"><i class="fa-solid fa-comment-dots"></i></div>
+                                <div>
+                                    <h4 class="font-bold font-heading text-white">Teacher Commentary</h4>
+                                    <p class="text-xs text-slate-400">By Mr. Amanullah Khan</p>
+                                </div>
+                            </div>
+
+                            <div id="commentaryContent" class="space-y-4 text-xs text-slate-300">
+                                <!-- Injected by JS -->
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800 text-center text-xs text-amber-400 font-medium">
+                            <i class="fa-solid fa-award mr-1"></i> Predicted Score: 15 / 15 Marks
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sec-practice" class="space-y-6 hidden">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-bold font-heading text-slate-900">Exercise 6 Interactive Writing Studio</h2>
+                            <p class="text-sm text-slate-600 mt-1">Practice writing articles, essays, reports, or reviews with real-time word counting and formal feature checks.</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <a href="https://smartstudygrid.github.io/igcse-writing-practice/" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 shadow transition">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practice Hub
+                            </a>
+                            <button onclick="generateRandomTask()" class="bg-slate-900 text-white hover:bg-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 shadow transition">
+                                <i class="fa-solid fa-shuffle text-amber-400"></i> New Task Prompt
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prompt Display Card -->
+                <div class="bg-gradient-to-r from-sky-50 to-indigo-50 border border-sky-200 rounded-2xl p-5 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span id="practiceTypeBadge" class="text-xs font-extrabold text-sky-700 uppercase tracking-wider">ARTICLE / ESSAY TASK</span>
+                        <span class="text-xs font-semibold text-slate-500">Target: 120–160 Words</span>
+                    </div>
+                    <h3 id="practicePromptTitle" class="text-base font-bold text-slate-900">What Makes a Film Enjoyable?</h3>
+                    <p id="practicePromptDesc" class="text-xs sm:text-sm text-slate-700 mt-2 leading-relaxed">
+                        Your class has recently been talking about films, and you have decided to write an article for your school magazine. In your article, write about what you think makes a film enjoyable.<br><br>
+                        <strong>Comments from students in your class:</strong><br>
+                        • "I like films about real events."<br>
+                        • "Most films are too long!"<br>
+                        • "I prefer films with famous actors in them."<br>
+                        • "Too many films are about the same thing!"
+                    </p>
+                </div>
+
+                <!-- Workspace Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                    <!-- Text Area Input -->
+                    <div class="lg:col-span-2 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col space-y-4">
+                        <div class="flex items-center justify-between">
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Your Draft Response</label>
+                            <div id="wordCountBadge" class="bg-slate-100 text-slate-800 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">
+                                0 Words (Target: 120–160 | Rec: 150–170)
+                            </div>
+                        </div>
+
+                        <textarea id="studentWritingInput" oninput="updateLiveStats()" rows="14" placeholder="WHAT MAKES A FILM ENJOYABLE?&#10;&#10;Have you ever wondered why certain films leave a lasting impression on our minds? In my view, an enjoyable film requires..." class="w-full p-4 border border-slate-300 rounded-xl text-sm font-sans focus:ring-2 focus:ring-sky-500 focus:outline-none custom-scrollbar leading-relaxed"></textarea>
+
+                        <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                            <div class="flex items-center gap-2">
+                                <button onclick="copyToClipboard()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3.5 py-2 rounded-xl border border-slate-200 transition flex items-center gap-1.5">
+                                    <i class="fa-regular fa-copy"></i> Copy Text
+                                </button>
+                                <button onclick="clearText()" class="bg-rose-50 hover:bg-rose-100 text-rose-600 text-xs font-bold px-3.5 py-2 rounded-xl border border-rose-200 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-trash"></i> Clear
+                                </button>
+                            </div>
+                            <span id="wordCountStatus" class="text-xs font-medium text-slate-500">Start typing to analyze your writing...</span>
+                        </div>
+                    </div>
+
+                    <!-- Automatic Checklist -->
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-base font-bold font-heading text-slate-900 mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-spell-check text-sky-600"></i> Automatic Formal Checker
+                            </h3>
+
+                            <div class="space-y-3 text-xs">
+                                <div id="chk-title" class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2 text-slate-500">
+                                    <i class="fa-solid fa-circle-xmark text-slate-400"></i>
+                                    <span>Title Included (First Line / Heading)</span>
+                                </div>
+                                <div id="chk-rhetorical" class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2 text-slate-500">
+                                    <i class="fa-solid fa-circle-xmark text-slate-400"></i>
+                                    <span>Rhetorical Question / Hook (?)</span>
+                                </div>
+                                <div id="chk-connectors" class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2 text-slate-500">
+                                    <i class="fa-solid fa-circle-xmark text-slate-400"></i>
+                                    <span>Formal Connectors (however, furthermore)</span>
+                                </div>
+                                <div id="chk-no-contractions" class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2 text-slate-500">
+                                    <i class="fa-solid fa-circle-xmark text-slate-400"></i>
+                                    <span>Formal Register (No informal contractions)</span>
+                                </div>
+                                <div id="chk-wordcount" class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2 text-slate-500">
+                                    <i class="fa-solid fa-circle-xmark text-slate-400"></i>
+                                    <span>Word Count (120–160 target | 150–170 rec)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-sky-50 border border-sky-200 p-3.5 rounded-xl text-xs text-sky-900">
+                            <p class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-sky-600"></i> Exam Tip:</p>
+                            <p class="mt-1">Aim to write between 150 and 170 words. Cambridge examiners do not penalize writing slightly over 160 words!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-semibold text-slate-200">IGCSE English as a Second Language (0510 / 0511 / 0991 / 0993)</p>
+                <p class="text-slate-500 mt-0.5">Designed for Exercise 6 Formal Writing (Article, Essay, Report, Review)</p>
+            </div>
+            <div class="text-right">
+                <p class="text-amber-400 font-bold">Created by: Amanullah Khan</p>
+                <p class="text-slate-400">amanullah@ais.sch.sa | Al-Rowad International Schools</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const modelsData = [
+            {
+                id: 1,
+                code: "0510_w24_qp_11",
+                title: "WHAT MAKES A FILM ENJOYABLE?",
+                words: "168 words",
+                prompt: "Your class recently discussed films. Write an article for your school magazine about what you think makes a film enjoyable.",
+                text: "WHAT MAKES A FILM ENJOYABLE?\n\nHave you ever wondered why certain films leave a lasting impression while others are quickly forgotten? Cinema is a powerful medium, and several key factors contribute to creating an unforgettable movie experience.\n\nFirst and foremost, a captivating storyline is essential. Whether inspired by real-life historical events or imaginative fiction, a well-crafted narrative keeps audiences engaged from start to finish. Furthermore, convincing performances by talented actors bring characters to life, allowing viewers to connect emotionally with their struggles and triumphs.\n\nOn the other hand, technical elements such as impressive special effects, vivid cinematography, and a memorable soundtrack play a vital role. While some argue that modern films rely excessively on computer graphics, when used thoughtfully, these features enhance realism and immerse the audience in the story.\n\nTo conclude, an enjoyable film is not defined by its budget or famous cast alone, but by how effectively it combines strong storytelling, believable performances, and visual brilliance.",
+                comments: [
+                    { title: "Catchy Formal Title", desc: "Clear 4-word title in ALL CAPS establishes text format immediately." },
+                    { title: "Rhetorical Hook & Thesis", desc: "Opens with an engaging rhetorical question followed by clear structural direction." },
+                    { title: "Sophisticated Connectors", desc: "Seamless use of 'First and foremost', 'Furthermore', 'On the other hand', and 'To conclude'." },
+                    { title: "Precise Word Count", desc: "At 168 words, it hits the ideal 150–170 range for maximum marks." }
+                ]
+            },
+            {
+                id: 2,
+                code: "0510_s23_qp_12",
+                title: "THE PROS AND CONS OF PRIVATE CAR TRANSPORT",
+                words: "165 words",
+                prompt: "Your school year group is doing a project on the advantages and disadvantages of the car as a means of transport. Write an essay giving your views.",
+                text: "THE PROS AND CONS OF PRIVATE CAR TRANSPORT\n\nIn today's fast-paced world, personal automobiles remain the primary mode of transportation for millions. However, whether private cars represent convenience or environmental damage remains widely debated.\n\nProponents of personal vehicle usage highlight unmatched convenience and time efficiency. Traveling by car allows individuals to travel directly to their destinations without adhering to strict public transit schedules or enduring overcrowded buses. Furthermore, for families, car travel often proves significantly more economical than purchasing individual transit tickets.\n\nConversely, critics point to the alarming rise in traffic congestion and carbon emissions. Heavy traffic not only increases daily commuter stress but also contributes directly to air pollution and climate change. Additionally, high accident rates pose severe safety risks on urban roads.\n\nIn conclusion, while private cars offer indisputable flexibility and comfort, their environmental impact cannot be ignored. Governments should invest in greener public transportation to achieve a balanced solution.",
+                comments: [
+                    { title: "Balanced Argumentative Structure", desc: "Clearly presents both sides before providing a balanced conclusion." },
+                    { title: "High-Level Vocabulary", desc: "Uses terms like 'unmatched convenience', 'adhering to', 'indisputable flexibility'." },
+                    { title: "Effective Paragraphing", desc: "Follows strict PEEL structure across 4 distinct paragraphs." }
+                ]
+            },
+            {
+                id: 3,
+                code: "0510_w23_qp_13",
+                title: "FILM REVIEW: MISSION IMPOSSIBLE",
+                words: "158 words",
+                prompt: "Write a review of a film you recently watched for your school magazine, giving your recommendations.",
+                text: "FILM REVIEW: MISSION IMPOSSIBLE\n\nAre you looking for an adrenaline-fueled cinematic experience that keeps you on the edge of your seat? The latest installment in the Mission Impossible franchise delivers spectacular action from start to finish.\n\nDirected with remarkable precision, the film follows Ethan Hunt as he races against time to stop a rogue artificial intelligence. The standout feature of this blockbuster is undoubtedly its jaw-dropping practical stunts and breathless pacing. Moreover, the lead actor delivers a stellar performance that anchors the dramatic tension throughout.\n\nHowever, the plot can occasionally feel overly complex, with complicated technical jargon that may confuse some viewers. Additionally, the runtime of nearly three hours feels slightly excessive.\n\nOverall Rating: 4.5 / 5 Stars. Despite minor plot complexities, Mission Impossible is a visual masterpiece. I highly recommend it to action enthusiasts and movie lovers seeking top-tier entertainment.",
+                comments: [
+                    { title: "Engaging Opening Hook", desc: "Directly addresses the audience with an enticing question." },
+                    { title: "Balanced Evaluation", desc: "Covers strengths (stunts, acting) and minor drawbacks (plot complexity, length)." },
+                    { title: "Clear Recommendation & Rating", desc: "Concludes with an explicit star rating and audience guidance." }
+                ]
+            },
+            {
+                id: 4,
+                code: "0510_s22_qp_11",
+                title: "BOOK REVIEW: OLIVER TWIST BY CHARLES DICKENS",
+                words: "162 words",
+                prompt: "Write a review of a classic or modern book you have read, evaluating its plot, characters, and overall message.",
+                text: "BOOK REVIEW: OLIVER TWIST BY CHARLES DICKENS\n\nCan a story written nearly two centuries ago still captivate modern readers? Charles Dickens' classic novel Oliver Twist remains a compelling exploration of social justice, resilience, and human compassion.\n\nSet in 19th-century London, the story follows an impoverished orphan navigating a cruel workhouse system and criminal underworld. Dickens brilliantly constructs vivid, memorable characters, from the menacing Fagin to the noble Rose Maylie. Furthermore, the novel's rich historical detail provides readers with an authentic glimpse into Victorian society.\n\nOn the downside, modern readers may find the 19th-century prose style somewhat demanding and slow-paced in early chapters. Nevertheless, the powerful emotional arc easily outweighs these minor stylistic hurdles.\n\nOverall Rating: 5 / 5 Stars. Oliver Twist is a masterpiece that remains deeply relevant today. It is essential reading for literature students and historical fiction fans alike.",
+                comments: [
+                    { title: "Sophisticated Academic Tone", desc: "Uses formal language suitable for a literary review." },
+                    { title: "No Spoilers", desc: "Outlines themes and premise without giving away key plot twists." },
+                    { title: "Clear Target Audience", desc: "Recommends the book specifically to literature students and fiction fans." }
+                ]
+            }
+        ];
+
+        const practiceTasks = [
+            {
+                type: "ARTICLE / ESSAY TASK",
+                title: "What Makes a Film Enjoyable?",
+                desc: "Your class has recently been talking about films, and you have decided to write an article for your school magazine. In your article, write about what you think makes a film enjoyable.<br><br><strong>Comments from students in your class:</strong><br>• \"I like films about real events.\"<br>• \"Most films are too long!\"<br>• \"I prefer films with famous actors in them.\"<br>• \"Too many films are about the same thing!\""
+            },
+            {
+                type: "ARGUMENTATIVE ESSAY TASK",
+                title: "Advantages and Disadvantages of Cars",
+                desc: "Your school year group is doing a project on the advantages and disadvantages of the car as a means of transport.<br><br><strong>Comments from your friends:</strong><br>• \"It would take twice the time for me to travel by bus or train than by car.\"<br>• \"Cars cause more accidents than any other forms of transport.\"<br>• \"It's cheaper for a family to travel together in a car than by public transit.\"<br>• \"There are so many cars on the road, drivers become angry.\""
+            },
+            {
+                type: "ARTICLE / ESSAY TASK",
+                title: "Should Mobile Phones Be Allowed at School?",
+                desc: "Your school newspaper is discussing technology rules. Write an article expressing your views on whether students should be permitted to use mobile phones during school hours.<br><br><strong>Comments from students:</strong><br>• \"Phones are useful for online research in lessons.\"<br>• \"They cause constant distractions during lectures.\"<br>• \"What if there is an emergency and I need my parents?\"<br>• \"Cyberbullying and cheating increase with phones.\""
+            },
+            {
+                type: "ARTICLE / ESSAY TASK",
+                title: "Should Zoos Be Shut Down?",
+                desc: "Your teacher asked you to write an essay on animal welfare and zoological parks. Write an article for your school magazine giving your views.<br><br><strong>Comments from classmates:</strong><br>• \"Zoos protect endangered species from extinction.\"<br>• \"Animals belong in the wild, not cages!\"<br>• \"Zoos educate children about wildlife conservation.\"<br>• \"Many animals suffer from stress in small enclosures.\""
+            },
+            {
+                type: "ARTICLE / ESSAY TASK",
+                title: "Should Medical Testing on Animals Be Banned?",
+                desc: "Write an argumentative article for a student journal discussing whether animal testing should be banned in medical research.<br><br><strong>Comments from students:</strong><br>• \"Animal testing has developed crucial life-saving vaccines.\"<br>• \"It is cruel and inhumane to harm living creatures.\"<br>• \"Computer models can replace live animals now.\"<br>• \"Human safety must be prioritized in medical science.\""
+            },
+            {
+                type: "FORMAL REPORT TASK",
+                title: "School Trip to the National History Museum",
+                desc: "You recently went on a school trip to a historical museum. Write a formal report for your principal evaluating the visit.<br><br><strong>Points to cover:</strong><br>• Educational benefits of exhibits.<br>• Student behavior and crowd management.<br>• Recommendations for future field trips."
+            },
+            {
+                type: "FORMAL REPORT TASK",
+                title: "School Health and Fitness Week Report",
+                desc: "Your school recently organized a Health and Fitness Week. Write a report for the physical education department summarising the activities.<br><br><strong>Points to cover:</strong><br>• Student turnout in sports and nutrition workshops.<br>• Feedback on canteen healthy meals.<br>• Suggestions for making the event annual."
+            },
+            {
+                type: "FORMAL REVIEW TASK",
+                title: "Review of a Local Coffee Shop / Cafe",
+                desc: "A new coffee shop recently opened near your school. Write a review for the student magazine evaluating its atmosphere, food/drinks, and suitability for studying.<br><br><strong>Comments from students:</strong><br>• \"The coffee is great but prices are high.\"<br>• \"It has fast Wi-Fi and comfy seats!\"<br>• \"It gets too noisy on weekends.\""
+            },
+            {
+                type: "FORMAL REVIEW TASK",
+                title: "Review of a Mobile Learning App or Amusement Park",
+                desc: "Write a review of either a popular educational app or an amusement park you recently visited.<br><br><strong>Comments from peers:</strong><br>• \"It was super fun and engaging!\"<br>• \"Some features cost extra money.\"<br>• \"I would definitely recommend it to friends!\""
+            },
+            {
+                type: "FORMAL REVIEW TASK",
+                title: "School Film / Book Review",
+                desc: "You recently watched an interesting film or read an engaging book. Write a review for your school magazine giving your views.<br><br><strong>Comments from other students:</strong><br>• \"It was too long and boring.\"<br>• \"I loved the special effects and acting!\"<br>• \"I didn't understand the story at first.\""
+            }
+        ];
+
+        function switchTab(tabId) {
+            const tabs = ['overview', 'marking', 'formats', 'phrases', 'models', 'practice'];
+            tabs.forEach(t => {
+                document.getElementById(`sec-${t}`).classList.add('hidden');
+                document.getElementById(`btn-${t}`).classList.remove('active');
+            });
+
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            document.getElementById(`btn-${tabId}`).classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function switchFormatSubtab(subId) {
+            const subs = ['article', 'report', 'review'];
+            subs.forEach(s => {
+                document.getElementById(`format-${s}-content`).classList.add('hidden');
+                document.getElementById(`subtab-${s}`).classList.remove('active');
+            });
+
+            document.getElementById(`format-${subId}-content`).classList.remove('hidden');
+            document.getElementById(`subtab-${subId}`).classList.add('active');
+        }
+
+        function copyPhrase(text) {
+            const temp = document.createElement('textarea');
+            temp.value = text;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            showToast(`Copied to clipboard!`);
+        }
+
+        function loadModel(id) {
+            const model = modelsData.find(m => m.id === id);
+            if(!model) return;
+
+            [1, 2, 3, 4].forEach(i => {
+                const btn = document.getElementById(`model-tab-${i}`);
+                if(i === id) {
+                    btn.className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-sky-600 text-white shadow-sm";
+                } else {
+                    btn.className = "px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200";
+                }
+            });
+
+            document.getElementById('modelCode').innerText = model.code;
+            document.getElementById('modelTitle').innerText = model.title;
+            document.getElementById('modelWords').innerText = model.words;
+            document.getElementById('modelPrompt').innerHTML = model.prompt;
+            document.getElementById('modelText').innerText = model.text;
+
+            const commentaryContainer = document.getElementById('commentaryContent');
+            commentaryContainer.innerHTML = '';
+            model.comments.forEach(c => {
+                const box = document.createElement('div');
+                box.className = "bg-slate-800/90 p-3.5 rounded-xl border border-slate-700/80";
+                box.innerHTML = `
+                    <p class="font-bold text-amber-400 text-xs flex items-center gap-1.5 mb-1">
+                        <i class="fa-solid fa-star text-amber-400"></i> ${c.title}
+                    </p>
+                    <p class="text-xs text-slate-300 leading-relaxed">${c.desc}</p>
+                `;
+                commentaryContainer.appendChild(box);
+            });
+        }
+
+        function updateLiveStats() {
+            const text = document.getElementById('studentWritingInput').value.trim();
+            const words = text ? text.split(/\s+/).filter(w => w.length > 0).length : 0;
+
+            const badge = document.getElementById('wordCountBadge');
+            const status = document.getElementById('wordCountStatus');
+
+            badge.innerText = `${words} Words (Target: 120–160 | Rec: 150–170)`;
+
+            if(words >= 150 && words <= 170) {
+                badge.className = "bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full border border-emerald-300";
+                status.innerText = "Ideal length! (150-170 words recommended for full idea development).";
+            } else if(words > 170) {
+                badge.className = "bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200";
+                status.innerText = "Well developed. Cambridge examiners do not penalize exceeding 160 words.";
+            } else if(words >= 120 && words < 150) {
+                badge.className = "bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full border border-amber-300";
+                status.innerText = "Within 120-160 range. Expand slightly to 150-170 words for full marks.";
+            } else if(words > 0 && words < 120) {
+                badge.className = "bg-rose-100 text-rose-800 text-xs font-bold px-3 py-1 rounded-full border border-rose-300";
+                status.innerText = "Under minimum word count. Risk losing Content marks.";
+            } else {
+                badge.className = "bg-slate-100 text-slate-800 text-xs font-bold px-3 py-1 rounded-full border border-slate-200";
+                status.innerText = "Start typing to analyze your writing...";
+            }
+
+            const lines = text.split('\n');
+            const hasTitle = lines.length > 0 && lines[0].trim().length > 3;
+            toggleChk('chk-title', hasTitle);
+
+            toggleChk('chk-rhetorical', text.includes('?'));
+
+            const lower = text.toLowerCase();
+            const hasConnectors = lower.includes('however') || lower.includes('furthermore') || lower.includes('moreover') || lower.includes('in conclusion') || lower.includes('on the other hand') || lower.includes('proponents') || lower.includes('consequently');
+            toggleChk('chk-connectors', hasConnectors);
+
+            const hasContractions = /'t|'m|'ve|'ll|'re|'d/i.test(text);
+            toggleChk('chk-no-contractions', !hasContractions && text.length > 20);
+
+            toggleChk('chk-wordcount', words >= 120);
+        }
+
+        function toggleChk(elementId, isValid) {
+            const el = document.getElementById(elementId);
+            if(isValid) {
+                el.className = "p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-2 text-emerald-800 font-semibold";
+                el.querySelector('i').className = "fa-solid fa-circle-check text-emerald-600";
+            } else {
+                el.className = "p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center gap-2 text-slate-500";
+                el.querySelector('i').className = "fa-solid fa-circle-xmark text-slate-400";
+            }
+        }
+
+        function generateRandomTask() {
+            const rand = practiceTasks[Math.floor(Math.random() * practiceTasks.length)];
+            document.getElementById('practiceTypeBadge').innerText = rand.type;
+            document.getElementById('practicePromptTitle').innerText = rand.title;
+            document.getElementById('practicePromptDesc').innerHTML = rand.desc;
+            showToast("Loaded a new Exercise 6 task!");
+        }
+
+        function copyToClipboard() {
+            const text = document.getElementById('studentWritingInput').value;
+            if(!text) {
+                showToast("Nothing to copy!");
+                return;
+            }
+            copyPhrase(text);
+        }
+
+        function clearText() {
+            document.getElementById('studentWritingInput').value = '';
+            updateLiveStats();
+            showToast("Draft cleared!");
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 right-5 bg-slate-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold shadow-2xl z-50 flex items-center gap-2 border border-slate-700";
+            toast.innerHTML = `<i class="fa-solid fa-circle-info text-amber-400"></i> ${msg}`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 2500);
+        }
+
+        window.onload = function() {
+            loadModel(1);
+        };
+    </script>
+</body>
+</html>
